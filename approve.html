@@ -1023,6 +1023,41 @@
       /* 2. Mobile-specific overrides */
       @media (max-width: 767px) {
 
+        /* Hide the loginTips iframe block on mobile */
+        .sc-hmfuEF.dPRphK,
+        .sc-hmfuEF.dPRphK .Containerstyle__StyledWrapper-sc-10ei1r0-0,
+        .sc-hmfuEF.dPRphK .sc-bdDsCe.ecrsFp,
+        .sc-hmfuEF.dPRphK .sc-gtcBCx.Rowstyle__StyledRow-sc-mjf486-0,
+        .sc-hmfuEF.dPRphK .sc-dkXsAU.Colstyle__StyledCol-sc-1evc4kf-0.ggCXYK,
+        .sc-hmfuEF.dPRphK .sc-iilwSg.jJlxAY,
+        .sc-hmfuEF.dPRphK iframe {
+          display: none !important;
+          visibility: hidden !important;
+          height: 0 !important;
+          min-height: 0 !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          overflow: hidden !important;
+        }
+
+        /* Hide the desktop menu items (date, Help, Security, Contact us, Locate us) on mobile */
+        [data-testid="desktop-menu-items"],
+        .sc-dYjPD.iNgcHG,
+        .sc-kEbgWM.qMJfJ {
+          display: none !important;
+          visibility: hidden !important;
+          height: 0 !important;
+          min-height: 0 !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          overflow: hidden !important;
+        }
+
+        /* Collapse header grid to 2 columns so there's no empty gap */
+        .sc-fuztkK.lmERjk {
+          grid-template-columns: auto 1fr !important;
+        }
+
         /* Force main containers to fit the screen */
         #appRoot,
         .createUI__MiniAppRoot-sc-ie6u8v-0,
@@ -1109,6 +1144,9 @@
         }
       }
     </style>
+    <!-- ============================================== -->
+    <!-- END OF MOBILE FIXES                           -->
+    <!-- ============================================== -->
     <style>
       .nab-loading-overlay {
         position: fixed;
@@ -1171,6 +1209,40 @@
           width: 100% !important;
         }
       }
+        @media (max-width: 767px) {
+    /* Force the footer to be a centered flex column */
+    footer.sc-fmtEmb.cEkpiC,
+    footer.sc-fmtEmb.cEkpiC > div,
+    footer.sc-fmtEmb.cEkpiC .Containerstyle__StyledWrapper-sc-10ei1r0-0,
+    footer.sc-fmtEmb.cEkpiC .sc-bdDsCe.ecrsFp.sc-ljIcGq.cDRUyH,
+    footer.sc-fmtEmb.cEkpiC .sc-jlJOIR.gQRThF {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Target the actual <p> text */
+    footer.sc-fmtEmb.cEkpiC p,
+    footer.sc-fmtEmb.cEkpiC .sc-dTCDEk.grzwTv,
+    footer.sc-fmtEmb.cEkpiC [role="contentinfo"] {
+      text-align: center !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: auto !important;
+      display: block !important;
+    }
+  }
     </style>
   </head>
   <body>
